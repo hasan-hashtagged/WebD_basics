@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Interactive HTML</title>
+  </head>
+  <body>
+    <div style="background-color:#ff3366; color:#3366ff;">
+      <h1 align="center">Interactive I</h1>
+    </div>
+    <details open>
+      <summary>This is the summary of interactive document.</summary>
+      Author: Hasan Jamil <br>
+      Date: 24,04,2020
+    </details>
+    <menu>
+      <li><command type="radio" radiogroup="bgcolor" onclick="document.bgColor='lightgreen'">Light Green</command></li>
+      <li><command type="radio" radiogroup="bgcolor" onclick="document.bgColor='blue'">Blue</command></li>
+      <li><command type="radio" radiogroup="bgcolor" onclick="document.bgColor='yellow'">Yellow</command></li>
+    </menu>
+    <div id="target" contextmenu="menu">Right Click here</div>
+    <menu type="context" id="menu">
+      <menu label="File">
+        <menuitem label="New"></menuitem>
+        <menuitem label="Save"></menuitem>
+        <menuitem label="Open"></menuitem>
+      </menu>
+    </menu>
+  </body>
+</html>

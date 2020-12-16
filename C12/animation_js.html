@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animations</title>
+    <script type="text/javascript">
+      var imgobj = null;
+      var animate;
+      function init() {
+        imgobj = document.getElementById('back');
+        imgobj.style.position = 'relative';
+        imgobj.style.left = '0px';
+      }
+      function moveRight() {
+        imgobj.style.left = parseInt(imgobj.style.left)+10+'px';
+        animate = setTimeout(moveRight, 200);
+      }
+      function stop() {
+        clearTimeout(animate);
+        imgobj.style.left = '0px';
+      }
+      window.onload = init;
+    </script>
+  </head>
+  <body>
+    <div style="background-color:#4499ff; color:ff6633;">
+      <h1 align="center">Animations</h1>
+    </div>
+    <form>
+      <img src="../back.jpg" id="back" alt="back" />
+      <p>Start animation by clicking start button</p>
+      <input type="button" value="Start" onclick="moveRight();">
+      <input type="button" value="Stop" onclick="stop();">
+    </form>
+  </body>
+</html>

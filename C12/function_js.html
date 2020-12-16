@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Functions</title>
+    <script type="text/javascript">
+      function simple() {
+        alert('Hi there! this is simple...');
+      }
+      function param(val) {
+        alert(val);
+      }
+      function area(l, b) {
+        return l*b;
+      }
+    </script>
+  </head>
+  <body onload="simple();">
+    <div style="background-color: #ff3366; color: #001122;">
+      <h1 align="center">Functions in java script</h1>
+    </div>
+    <input type="button" name="ok" value="ok" onclick="param('this is the parameter of function..')">
+    <script type="text/javascript">
+      function total(a,b,c) {
+        sum = a+b+c;
+        document.write('<br>'+sum);
+      }
+      total(2,3,4);
+      var test = area(2,3);
+      document.write("<br>Area of rectangle: "+test)
+    </script>
+  </body>
+</html>

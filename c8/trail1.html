@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+  </head>
+  <body>
+    <form>
+      Name: <input type="text" id="first" placeholder="Enter name" size="5" maxlength="7"><br>
+      Password: <input type="password" id="pwd" value="chacha" size="4" maxlength="6" ><br>
+      <input type="hidden" id="country" value="India"/><br>
+      <input type="submit" onclick="alert('Hi '+ document.getElementById('first').value+' welcome to '+ document.getElementById('country').value)" value="submit">
+    </form>
+  </body>
+</html>

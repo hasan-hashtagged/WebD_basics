@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Timer</title>
+    <script type="text/javascript">
+      function repeat() {
+        var t = setTimeout("alert('5 Seconds passed')", 5000);
+      }
+      function inter() {
+        var t = setInterval("alert('10 second happened')", 10000);
+      }
+    </script>
+  </head>
+  <body>
+    <div style="background-color:#334499; #color: 995511;">
+      <h1 align="center">Timers</h1>
+    </div>
+    <input type="button" name="ok" value="timer" onclick="repeat();"><br>
+    Interval Button: <input type="button" name="interval" value="Interval" onclick="inter();">
+  </body>
+</html>

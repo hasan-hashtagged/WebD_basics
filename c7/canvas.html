@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas practice</title>
+    <script type="text/javascript">
+      function display() {
+        var mycanvas = document.getElementById("mycan");
+        if(mycanvas.getContext) {
+          var cont = mycanvas.getContext('2d');
+          cont.fillStyle = 'rgb(50,0,0)'
+          cont.fillRect(0, 10, 300, 300)
+          cont.fillStyle = 'rgb(0,0,50)'
+          cont.fillRect(300, 10, 200,500)
+          cont.fillStyle = 'rgb(0,50,0)'
+          cont.fillRect(200, 200, 400, 400)
+          cont.fillStyle = 'rgb(50,50,0)'
+          cont.fillRect(0, 300, 200, 500)
+        }
+      }
+    </script>
+  </head>
+  <body onload="display();">
+    <canvas id="mycan" width="500" height="500">
+      Your browser does not support canvas...
+    </canvas>
+  </body>
+</html>
