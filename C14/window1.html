@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Window object</title>
+    <script type="text/javascript">
+      function openCreateWind(url) {
+        var width = 400;
+        var height = 300;
+        var windowFeatures = "width = "+width+", height= "+height+", status,resizeable";
+        myWin = window.open(url, "subwind", windowFeatures);
+      }
+      function alerter() {
+        alert("Hola!!");
+      }
+      function resize_Win() {
+        window.resizeBy(-100,-100);
+      }
+      function closer() {
+        if(confirm("Do you want to close??"))
+          window.close();
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="button" value="New window" onclick="openCreateWind('../C13/array.html')">
+      <input type="button" value="Alert" onclick="alerter();">
+      <input type="button" value="resize" onclick="resize_Win();">
+      <input type="button" value="Close" onclick="closer();">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>History</title>
+    <script type="text/javascript">
+      showCount() {
+        var hist = history.length;
+        alert("You have this: "+ hist);
+      }
+      fungo() {
+        window.history.go(1);
+      }
+      funfor() {
+        window.history.forward();
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" name="hist" value="count History" onclick="showCount();">
+    <input type="button" value="go" onclick="fungo();">
+    <input type="button" value="forward" onclick="funfor();">
+  </body>
+</html>

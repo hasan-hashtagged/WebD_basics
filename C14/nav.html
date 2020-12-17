@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Navigator trial</title>
+    <script type="text/javascript">
+      function displayNavProp() {
+        with(document) {
+          write(<b>appName: </b>)
+          write(navigator.appName+ "<br>");
+          write(<b>appVersion: </b>)
+          write(navigator.appVersion+ "<br>");
+        }
+      }
+      function display() {
+        if(navigator.appName=='Firefox')
+          displayNavProp();
+        else
+          document.write("haah <br>");
+      }
+      display();
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write("Java enabled: "+navigator.javaEnabled()+"<br>");
+      document.write("Taint enabled: "+navigator.taintEnabled()+"<br>")
+    </script>
+  </body>
+</html>

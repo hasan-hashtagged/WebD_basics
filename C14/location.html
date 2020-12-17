@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Location Object</title>
+    <script type="text/javascript">
+      function forAssign() {
+        window.location.assign("./screen.html");
+      }
+      function forReplace() {
+        window.location.replace("../C13/array.html");
+      }
+      function goTo() {
+        window.location.href = window.document.loc.proto.options[window.location.loc.proto.selectedIndex].text
+        +document.loc.hostnamefill.value;
+      }
+    </script>
+  </head>
+  <body>
+    <form name="loc" method="post">
+      <pre>
+        Protocol:
+        <select name="proto">
+          <option>http://</option>
+          <option>file://</option>
+          <option>mailto:</option>
+        </select>
+      </pre>
+      <pre>
+        HostName:
+        <input type="text" name="hostnamefill" size=23 maxlength=256 value="/C:/Users/hasan/Desktop/tester/C14/window1.html">
+      </pre>
+      <input type="button" name="Go" value="Search" onclick="goTo()">
+    </form>
+    <input type="button" value="Assign" onclick="forAssign()">
+    <input type="button" value="Replace" onclick="forReplace()">
+  </body>
+</html>
