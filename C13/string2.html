@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form and string</title>
+  </head>
+  <body style="background-color: #ffccff;">
+    <h3>Enter the text to be counted:</h3>
+    <form name="wordcount">
+      <textarea name="wc1" rows="12" cols="38" wrap="virtual" style="color:pink; background-color: blue; font-size: 20px"></textarea><br>
+      <input type="button" value="Calculate" onClick="countit()">
+      <input type="text" name="wc2" size="20">
+    </form>
+    <script type="text/javascript">
+      function countit() {
+        var cont = document.wordcount.wc1.value;
+        cont = cont.split(" ");
+        document.wordcount.wc2.value = cont.length;
+      }
+    </script>
+  </body>
+</html>

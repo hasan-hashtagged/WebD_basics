@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Boolean Object</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var bool = new Array(6);
+      bool[0] = new Boolean(0);
+      bool[1] = new Boolean(8);
+      bool[2] = new Boolean('False');
+      bool[3] = new Boolean("");
+      bool[4] = new Boolean(null);
+      bool[5] = new Boolean(NaN);
+      for(var i = 0; i<6; i++) {
+        document.write("Value of Boolean "+i+" is "+ bool[i]+"<br>");
+      }
+    </script>
+  </body>
+</html>

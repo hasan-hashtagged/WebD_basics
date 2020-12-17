@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>template</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function employee(name, salary, job) {
+        this.name = name;
+        this.salary = salary;
+        this.job = job;
+      }
+      var emp = new employee("Hasan", 3000, "MTS");
+      document.write("Hi "+ emp.name+"<br>Salary: "+emp.salary+"<br>Job: "+emp.job);
+    </script>
+  </body>
+</html>
