@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Manipulated</title>
+    <script type="text/javascript">
+      function changer() {
+        document.getElementById("T1").innerHTML="I am changed.";
+        document.getElementById("b1").value="clicked";
+      }
+    </script>
+  </head>
+  <body>
+    <div style="background-color: green; color: white">
+      <h1 align="center">Changing Text</h1>
+    </div>
+    <p id="T1">THIS IS NOT CHANGED</p>
+    <input type="button" id="b1" value="change" onclick="changer();">
+  </body>
+</html>

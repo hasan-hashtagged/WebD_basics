@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document Form</title>
+    <script type="text/javascript">
+      function Order() {
+        var order = "Dear ";
+        order = order + document.forms[0].nm.value;
+        order += ", You have chosen: <br>";
+        if(document.forms[0].size.options[0].selected)
+          order += "small";
+        if(document.forms[0].size.options[1].selected)
+          order += "medium";
+        if(document.forms[0].size.options[2].selected)
+          order += "large";
+        order += " and it will be packed with ";
+        if(document.forms[0].size.packaging[0].checked)
+          order += document.forms[0].packaging.value;
+        if(document.forms[0].size.packaging[1].checked)
+          order += document.forms[0].packaging.value;
+        alert(order);
+      }
+    </script>
+  </head>
+  <body>
+    <div style="background-color: #66ff33; color:#3355ff;">
+      <h1 align="center">Forms and Document</h1>
+    </div>
+    <form action="mailto:hasanj1729@gmail.com" method="post">
+      Name: <input type="text" name="nm" placeholder="Name"><br>
+      Size:
+      <select name="size">
+        <option>small</option>
+        <option selected> medium</option>
+        <option> large</option>
+      </select><br>
+      Packaging:
+      <input type="radio" name="packaging" value="box"> Carton box <br>
+      <input type="radio" name="packaging" value="styro"> Styrofoam<br>
+      <input type="submit" value="order" onclick="Order()">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Methods</title>
+    <script type="text/javascript">
+      function getEle() {
+        newWin = window.open("");
+        newWin.document.open();
+        var abc = document.getElementsByName("nm");
+        newWin.document.write("Var length: "+ abc.length);
+        newWin.document.close();
+      }
+    </script>
+  </head>
+  <body>
+    <div style="background-color: #ffaa33; color: #ff3333;">
+      <h1>Document Methods</h1>
+    </div>
+    <b>First: </b><input type="text" name="nm" placeholder="First Name"><br>
+    <b>Second: </b><input type="text" name="nm" placeholder="Middle Name"><br>
+    <b>Third: </b><input type="text" name="nm" placeholder="last Name"><br>
+    <input type="button" value="Go" onclick="getEle();">
+  </body>
+</html>

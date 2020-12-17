@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="T2">
+  <head>
+    <meta charset="utf-8">
+    <title>Verify type</title>
+    <script type="text/javascript">
+      function checkNodeType() {
+        var tag = document.getElementById("T1");
+        var val = tag.nodeType;
+        if(val == 1)
+          document.write("ELEMENT TYPE");
+        if(val==2)
+          document.write("ATTRIBUTE TYPE");
+        if(val == 3)
+          document.write("TEXT TYPE");
+        if(val == 8)
+          document.write("COMMENT TYPE");
+        if(val == 9)
+          document.write("DOCUMENT TYPE");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>checking node type</h1>
+    <p id="T1">Welcome to the universe.</p>
+    <input type="button" onclick="checkNodeType();" value="Verify">
+  </body>
+</html>
