@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Time Validation</title>
+    <script type="text/javascript">
+      function check(thisform) {
+        var txtTime = thisform.time.value;
+        if(txtTime=="") {
+          alert('Enter time');
+          thisform.time.focus();
+          return false;
+        }
+        var pos=thisform.time.indexOf(":");
+        if(pos<0) {
+          alert('Invalid time: insert colon between hh and mm');
+          return false;
+        }
+        if(pos>2 || pos <1) {
+          alert("Invalid time");
+          return false;
+        }
+        var hours = thisform.time.substring(0, pos);
+        if(hours>12) {
+          alert("hours should not be greater than 12");
+          return false;
+        }
+        if(hours<=0) {
+          alert("Hours cannot be smaller than 1");
+          return false;
+        }
+        var min = thisform.time.substring(pos+1, pos+3);
+        if(min>59 || min<0) {
+          alert('Invalid minute!!');
+          return false;
+        }
+        var tx =txtTime.substring(5,8);
+        if(tx!="AM" || tx !="am" || tx!="pm" || tx!="PM") {
+          alert("Include am/pm");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <div style="background-color: #334422; color:#992299;">
+      <h1>Validating Time</h1>
+    </div>
+    <form onsubmit="return check(this)" method="post">
+      <input type="text" name="time" placeholder="hh:mmXX">
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

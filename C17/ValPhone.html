@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Validating Number</title>
+    <script type="text/javascript">
+      function valNum(thisform) {
+        var num = thisform.num.value;
+        if(num == null || num ==""){
+          alert('Enter value');
+          thisform.num.focus();
+          return false;
+        }
+        if(num<10) {
+          alert('Not a valide phone number');
+          return false;
+        }
+        if(isNaN(num)) {
+          alert('Not a Number');
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <div style="background-color: #554400; color:#9999ff;">
+      <h1>Validating Phone Number</h1>
+    </div>
+    <form onsubmit="return valNum(this)" method="post">
+      <input type="text" name="num" >
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
