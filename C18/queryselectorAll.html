@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Query Selector All</title>
+  </head>
+  <body>
+    <h1>Working with querySelectorall</h1>
+    <form id="myform">
+      <b>Select favourite cars:</b><br>
+      <input type="checkbox" name="cars" value="Ferrari">Ferrari <br>
+      <input type="checkbox" name="cars" value="Audi"> Audi <br>
+      <input type="checkbox" name="cars" value="Mercedes">Mercedes <br>
+      <input type="checkbox" name="cars" value="BMW"> BMW <br>
+      <input type="submit" />
+    </form>
+    <script type="text/javascript">
+      if(document.querySelector) {
+        document.querySelector('#myform').onsubmit = function() {
+          var checkCars = this.querySelectorAll('input[name="cars"]:checked');
+          document.write("<b>You have selected following Cars:</b><br>");
+          for(var i=0; i < checkCars.length; i++) {
+            var val = "";
+            val+=checkCars[i].value + "<br>";
+            document.write("<li>"+val+"</li>")
+          }
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
