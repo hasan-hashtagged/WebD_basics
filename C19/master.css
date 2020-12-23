@@ -1,0 +1,7 @@
+body {
+  background-color: blue;
+}
+p {
+  height: 200px;
+  background: -moz-gradient(linear, left top, left bottom, from(white), to(red));
+}
