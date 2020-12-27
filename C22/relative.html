@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Relative Positioning</title>
+    <style media="screen">
+      .pos_left {
+        position: relative;
+        left: -20px;
+      }
+      .pos_right {
+        position: relative;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Relative Positioning</h1>
+    </div>
+    <p>Normal Positioning</p>
+    <p class="pos_left">
+      This is going to be relatively left
+    </p>
+    <p class="pos_right">
+      this is going to be relatively right
+    </p>
+  </body>
+</html>
