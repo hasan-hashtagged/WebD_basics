@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Border spacing.</title>
+    <style media="screen">
+      .sep {
+        border-spacing: 10px 5px;
+      }
+      .coll {
+        border-spacing: 10px;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="color: white; background: green;">
+      <h1>Border-spacing properties</h1>
+    </div>
+    <table class="coll">
+      <tr>
+        <th>Name</th>
+        <th>Roll No.</th>
+      </tr>
+      <tr>
+        <td>Hasan</td>
+        <td>B160510CS</td>
+      </tr>
+    </table><br><br>
+    <table class="sep">
+      <tr>
+        <th>Name</th>
+        <th>Roll No.</th>
+      </tr>
+      <tr>
+        <td>Hasan</td>
+        <td>B160510CS</td>
+      </tr>
+    </table>
+  </body>
+</html>

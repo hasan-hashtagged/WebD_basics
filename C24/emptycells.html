@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Table Empty Cells</title>
+    <style media="screen">
+      table,th, td {
+        border: 1px solid black;
+        empty-cells: hide;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Table Empty cells</h1>
+    </div>
+    <table class="test">
+      <tr>
+        <th>Name</th>
+        <th>Words</th>
+        <th>Roll No.</th>
+      </tr>
+      <tr>
+        <td class="f1">Hasan Jamil</td>
+        <td class="f2">Trust is one of the most expensive things. Cheap ones cannot afford it.</td>
+        <td class="f3">B160510CS</td>
+      </tr>
+      <tr>
+        <td>Allan</td>
+        <td></td>
+        <td>B160540CS</td>
+      </tr>
+      <tr>
+        <td>Allan</td>
+        <td>Cheap ones cannot afford it.</td>
+        <td>B160540CS</td>
+      </tr>
+    </table>
+  </body>
+</html>

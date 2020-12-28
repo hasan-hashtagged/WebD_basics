@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Border Collapse.</title>
+    <style media="screen">
+      .sep {
+        border-collapse: seperate;
+      }
+      .coll {
+        border-collapse: collapse;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="color: white; background: green;">
+      <h1>Border-Collapse properties</h1>
+    </div>
+    <table class="coll">
+      <tr>
+        <th>Name</th>
+        <th>Roll No.</th>
+      </tr>
+      <tr>
+        <td>Hasan</td>
+        <td>B160510CS</td>
+      </tr>
+    </table><br><br>
+    <table class="sep">
+      <tr>
+        <th>Name</th>
+        <th>Roll No.</th>
+      </tr>
+      <tr>
+        <td>Hasan</td>
+        <td>B160510CS</td>
+      </tr>
+    </table>
+  </body>
+</html>
