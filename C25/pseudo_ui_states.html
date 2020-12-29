@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>UI States element.</title>
+    <style media="screen">
+      button.but {
+        background: lime;
+      }
+      button.but:enabled {
+        background: blue;
+        color: yellow;
+        border-radius: 10px;
+      }
+      button.but:disabled {
+        background: magenta;
+        color: white;
+      }
+      span {
+        background: orange;
+      }
+      input:checked+span {
+        background: green;
+        color: white;
+      }
+      input:indeterminate + span {
+        background: red;
+      }
+      input.tex:disabled {
+        background-color: pink;
+        border-radius: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>UI pseudo class</h1>
+    </div>
+    <form action="#">
+      <p>Default:</p>
+      <button  name="button" disabled>disabled</button>
+      <button>enabled</button><br>
+      <input type="checkbox" checked>checked by Default
+      <input type="checkbox" >Not checked <br>
+      <input type="radio" checked> checked by Default
+      <input type="radio"> Not checked <br>
+      <p>UsING ui element states</p>
+      <button class="but" name="button" disabled>disabled</button>
+      <button class="but">enabled</button><br>
+      <input type="checkbox" checked><span>checked by Default</span>
+      <input type="checkbox" ><span>Not checked </span><br>
+      <input type="radio" checked><span>checked by Default</span>
+      <input type="radio"><span>Not checked </span><br>
+      <input type="checkbox" id="here"><span>Indeterminate val</span> <br>
+      <input type="text" class="tex" disabled> this is text box
+    </form>
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('here').indeterminate = true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pseudo Negation</title>
+    <style media="screen">
+      :not(p) {
+        background: orange;
+        margin: 30px;
+      }
+      p {
+        border: 1px solid green;
+        background: pink;
+      }
+      a{
+        background: magenta;
+        color: blue;
+      }
+      a:not([href*=google]) {
+        background: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    demo text demo text demo text demo text demo text demo text demo text
+    demo text demo text demo text demo text demo text demo text demo text
+    demo text demo text demo text demo text demo text demo text demo text
+    demo text demo text demo text demo text demo text demo text demo text
+    <p>
+      paragraph paragraph paragraph paragraphparagraph paragraphparagraph paragraph
+      paragraph paragraph paragraph paragraphparagraph paragraphparagraph paragraph
+      paragraph paragraph paragraph paragraphparagraph paragraphparagraph paragraph
+      paragraph paragraph paragraph paragraphparagraph paragraphparagraph paragraph
+    </p>
+    <ul>
+      <li><a href="www.google.com">Google</a></li>
+      <li><a href="www.yahoo.com">Yahoo</a></li>
+      <li><a href="http://rediff.com">Rediff</a></li>
+      <li><a href="http://google.co.in">Google India</a></li>
+    </ul>
+    Demo text Demo text Demo text
+    Demo text Demo text Demo text
+    Demo text Demo text Demo text
+    Demo text Demo text Demo text
+    <p>
+      ha ha ha ha ha ha  ha hahahh haha haha hahah ah ahaha ha
+      ha ha ha ha ha ha  ha hahahh haha haha hahah ah ahaha ha
+      ha ha ha ha ha ha  ha hahahh haha haha hahah ah ahaha ha
+      ha ha ha ha ha ha  ha hahahh haha haha hahah ah ahaha ha
+    </p>
+  </body>
+</html>

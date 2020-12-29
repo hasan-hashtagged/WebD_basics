@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pseudo Elements</title>
+    <style media="screen">
+      p.note::before {
+        content: "Note:";
+      }
+      p.note {
+        border: 1px solid red;
+      }
+      body::after {
+        content: "The End";
+        background: red;
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid green;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Pseudo Elements</h1>
+    </div>
+    demo text demo text demo text demo text demo text demo text
+    demo text demo text demo text demo text demo text demo text
+    demo text demo text demo text demo text demo text demo text
+    demo text demo text demo text demo text demo text demo text
+    <p class="note">This is a note</p>
+  </body>
+</html>

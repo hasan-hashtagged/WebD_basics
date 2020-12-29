@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Structural Pseudo class</title>
+    <style media="screen">
+      :root {background: pink;}
+      p:first-of-type{border: 2px solid black; background:lime;}
+      p:last-of-type{border: 2px solid black; background: orange;}
+      li:first-child {border: 2px solid black;}
+      li:nth-last-child(2){border: 2px solid black; background: green;}
+      p:nth-last-of-type(2){border: 2px solid black; background: yellow;}
+    </style>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Structural Classes</h1>
+    </div>
+    <p>
+      This is first para This is first para This is first para This is first para
+      This is first para This is first para This is first para This is first para
+      This is first para This is first para This is first para This is first para
+      This is first para This is first para This is first para This is first para
+    </p>
+    <ul>
+      <li><a href="#">block1</a></li>
+      <li><a href="#">block2</a></li>
+      <li><a href="#">block3</a></li>
+      <li><a href="#">block4</a></li>
+      <li><a href="#">block5</a></li>
+    </ul>
+    <p>
+      hasa
+      <p>first</p>
+      <p>second</p>
+      <p>Third</p>
+      <p>fourth</p>
+      <p>Fifth</p>
+    </p>
+  </body>
+</html>
