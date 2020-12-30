@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Transformation</title>
+    <style media="screen">
+      #trans {
+        position: relative;
+        margin: 10px auto;
+        width: 300px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transition: all 1.0s linear;
+      }
+      img {
+        width: 300px;
+        height: 200px;
+      }
+      #trans:hover {
+        transform: rotatez(35deg);
+        box-shadow: -5px 5px 5px #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Transformation of content</h1>
+    </div>
+    <div id="trans">
+      <img src="../bear.jpg" alt="test">
+    </div>
+  </body>
+</html>

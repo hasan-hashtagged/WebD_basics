@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Transition effect</title>
+    <style media="screen">
+      div {
+        background: url('../plan.png');
+      }
+      .area {
+        border-bottom: 6px solid black;
+        height: 500px;
+        position: relative;
+      }
+      .item {
+        background: red;
+        color: #444;
+        margin: 0 20px;
+        height: 30px;
+        line-height: 30px;
+        position: absolute;
+        text-align: center;
+        width: 90px;
+        height: 90px;
+        opacity: 0.9;
+      }
+      .area .item {
+        transition: all 1s linear;
+      }
+      .area .item1 {
+        bottom:  10px;
+        transition-duration: 1s;
+      }
+      .area .item2 {
+        bottom:  110px;
+        transition-duration: .75s;
+      }
+      .area .item3 {
+        bottom:  220px;
+        transition-duration: .5s;
+      }
+      .area .item4 {
+        bottom:  330px;
+        transition-duration: .25s;
+      }
+      .item:hover, .item:focus {
+        color: white;
+        width: 400px;
+        opacity: .6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="area">
+      <h1>Working with tarnsition</h1>
+      <div class="item item1">1 sec</div><br>
+      <div class="item item2">.75 sec</div><br>
+      <div class="item item3">.5 sec</div><br>
+      <div class="item item4">.25 sec</div><br>
+    </div>
+  </body>
+</html>

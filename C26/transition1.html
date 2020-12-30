@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Transition effect..</title>
+    <style media="screen">
+      .area {
+        border-bottom: 6px solid black;
+        height: 500px;
+        position: relative;
+      }
+      .item {
+        width: 240px;
+        height: 200px;
+        opacity: 0.9;
+        border-radius: 5px;
+      }
+      .area .item {
+        transition: all 1s linear;
+      }
+      .item:hover, .item:focus {
+        border-radius: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="area">
+      <h1>Working with transition</h1>
+      <img class="item item1" src="../tiger.jpg" alt="test">
+      <img class="item item2" src="../back.jpg" alt="test">
+      <img class="item item3" src="../bear.jpg" alt="test">
+      <img class="item item4" src="../giraffe.jpg" alt="test">
+    </div>
+  </body>
+</html>
