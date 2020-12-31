@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Custom Data</title>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Custom Data attribute.</h1>
+    </div>
+    <img src="../tiger.jpg" data-out="../bear.jpg" data-over="../giraffe.jpg">
+    <img src="../bear.jpg" data-out="../tiger.jpg" >
+    <img src="../giraffe.jpg" data-out="../bear.jpg" data-over="../tiger.jpg">
+  </body>
+  <script type="text/javascript">
+    function imageRollOver() {
+      var all = document.getElementsByTagName("img");
+      for(var i=0; i<all.length; i++) {
+        if(all[i].getAttribute("data-over")) {
+          all[i].onmouseover= function() {
+            this.src=this.getAttribute("data-over");
+          }
+          all[i].onmouseout= function() {
+            this.src=this.getAttribute("data-out");
+          }
+        }
+      }
+    }
+    imageRollOver();
+  </script>
+</html>

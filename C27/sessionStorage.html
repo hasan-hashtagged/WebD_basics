@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Session storage</title>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Session Storage..</h1>
+    </div>
+    <div id="todo" contenteditable="true">
+      <div contenteditable="false">
+        <b>Enter the task:</b>
+      </div>
+      <ol>
+        <li>Take Pills..</li>
+        <li>Completing task assigned.</li>
+      </ol>
+    </div>
+    <input type="submit" value="Reset the list" onclick="resetList(); return false;">
+    <script type="text/javascript">
+      var defHTML='<div contenteditable="false"><b>Enter the task:</b></div>\n';
+      defHTML+='<ol>\n<li>Take Pills..</li>\n<li>Completing task assigned.</li>\n</ol>\n';
+      var todoref = document.getElementById('todo');
+      function resetList() {
+        todoref.innerHTML=defHTML;
+      }
+      var sesStorage = (window.seesionStorage)? sessionStorage[location.hostnamew] : null;
+      if(sesStorage) {
+        if(sesStorage.tododata)
+        todoref.innerHTML=sesStorage.tododata;
+        todoref.onkeyup=function(e) {
+          sesStorage.tododata=this.innerHTML;
+        }
+      }
+    </script>
+  </body>
+</html>

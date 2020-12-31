@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Content Editable</title>
+    <script type="text/javascript">
+      function getUserScribble() {
+        var scribble = '<i style="color: magenta; font-family: Arial; font-size: 5;">Write Here...</i>';
+        document.getElementById('scribble').innerHTML=scribble;
+      }
+    </script>
+  </head>
+  <body onload="getUserScribble();">
+    <div style="background: green; color: white;">
+      <h1>Let's see content Editable</h1>
+    </div>
+    <p>
+      <table cellpadding=62>
+        <td background="../np.jpg" contenteditable="true" id="scribble"></td>
+      </table>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Geolocation</title>
+  </head>
+  <body>
+    <section>
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+      <article>
+        Connecting...
+      </article>
+      <script type="text/javascript">
+        function success(position) {
+          var s = document.querySelector('#status');
+          if(s.className=="success") {
+            return;
+          }
+          s.innerHTML="found you!!"
+          s.className= "success";
+          var mapcanvas = document.createElement('div');
+          mapcanvas.id = 'mapcanvas';
+          mapcanvas.style.height='400px';
+          mapcanvas.style.width='560px';
+          document.querySelector('article').appendChild(mapcanvas);
+
+          var latlng= new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+          var myoptions {
+            zoom: 15,
+            center: latlng,
+            mapTypeControl: false,
+            navigationControlOptions: {style: google.maps.navigationControlStyle.SMALL},
+            mapTypeId: google.maps.MpaTypeId.ROADMAP
+          };
+          var map = new google.maps.Map(getElementById("mapcanvas"), myoptions);
+          var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: here
+          });
+        }
+        function error(msg) {
+          var s= document.querySelector('#status');
+          s.innerHTML = typeof msg == 'string'?msg: "failed";
+          s.className = 'fail';
+        }
+        if(navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(success, error);
+        } else {
+          error('not supported');
+        }
+      </script>
+    </section>
+  </body>
+</html>

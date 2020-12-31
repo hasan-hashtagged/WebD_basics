@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    #dragzone {
+      list-style: none;
+      float: left;
+    }
+    #dragzone li * {
+      border: 4px solid black;
+      display: block;
+    }
+    #dragzone, #drop-zone, #drop-data {
+      width: 30%;
+    }
+    #drop-zone, #drop-data {
+      padding: 40px;
+      border: 5px solid black;
+      float: right;
+      height: 200px;
+      overflow: auto;
+    }
+  </style>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Drag and Drop Test</h1>
+    </div>
+    <section id="dnd section">
+      <ol id="dragzone">
+        <li><span class="draggable-text" draggable="true">Select drop and drag text 1</span></li>
+        <li><span class="draggable-text" draggable="true" class="overwrite">Select drop and drag text 2</span></li>
+        <li><img src="../tiger.jpg" draggable="true"></li>
+        <li><img src="../bear.jpg" draggable="true"></li>
+      </ol>
+      <div id="drop-data">Detail of dragged data</div>
+      <div id="drop-zone">
+        drop area
+      </div>
+        <script defer>
+          (function(){
+            var dragZone = document.querySelector('#drag-zone');
+            dragZone.addEventListener('dragstart', function(event) {
+              if(event.target.className) {
+                event.dataTransfer.effectAllowed = event.target.className;
+                event.target.style.border="4px solid black";
+              }
+              else {
+                if(event.target.parentNode.className == 'overwrite') {
+                  event.dataTransfer.setData("text","<strong>overwrittenContent</strong>");
+                }
+                event.target.parentNode.style.border="4px solid black";
+              }
+              return true;
+            }, true);
+            dragZone.addEventListener('dragend', function(event) {
+              if(event.target.className) {
+                event.target.style.border="4px solid black";
+              }
+              else {
+                event.target.parentNode.style.border="4px solid black";
+              }
+              return true;
+            }, true);
+
+            dragZone.addEventListener('dragenter', function(event) {
+              if(event.preventDefault) event.preventDefault();
+              event.dataTransfer.dropEffect = 'copy';
+              this.className = 'hovering';
+              return false;
+            }, false);
+
+            dragZone.addEventListener('dragover', function(event) {
+              if(event.preventDefault) event.preventDefault();
+              event.dataTransfer.dropEffect = 'copy';
+              return false;
+            }, false);
+
+            dragZone.addEventListener('dragleave', function(event) {
+              if(event.preventDefault) event.preventDefault();
+              this.className = '';
+              return false;
+            }, false);
+
+            dropZone.addEventListener('drop' function(event) {
+              if(event.preventDefault) event.preventDefault();
+              var imgPassed = null;
+              var dropdata = document.querySelector('#drop-data');
+              var types = event.dataTransfer.types;
+              document.querySelector('#drop-data').textContent = '';
+              this.innerHTML ='';
+              for( var i=0; i<types.length; i++ ) {
+                if(types[i] == 'Files') {
+                  var files = event.dataTransfer.files;
+                  for(var j=0; j< files.length; j++) {
+                    dropdata.textContent+='File Name: '+files[j].fileName;
+                    dropdata.textContent+='File Size: '+files[j].fileSize;
+                  }
+                }
+                else {
+                  if(typeof event.dataTransfer.getData(types[i]) != 'undefined') {
+                    dropdata.innerHTML+='<p><em class="datatypes">'+types[i]+'</em>:<br>'+event.dataTransfer.getData(types[i]).replace(/</g,'&lt;')+'</p>';
+
+                  }
+                }
+                if(types[i] == 'text/uri-list') {
+                  imgPassed = event.dataTransfer.getData('text/uri-list');
+                }
+              }
+              if(imgPassed) {
+                var cEl = document.createElement('canvas');
+                cEl.width = 200;
+                cEl.height = 100;
+                var ctx = cEl.getContext('2d');
+                var img_buffer = document.createElement('img');
+                var img_buffer.style.display = 'none';
+                //document.body.appendChild(img_buffer);
+                img_buffer.onload=function() {
+                  ctx.drawImage(img_buffer,0,0,100,100);
+                }
+                this.appendChild(cEl);
+              } else {
+                  if(event.dataTransfer.getData('text')) {
+                    this.innerHTML = event.dataTransfer.getData('text');
+                  }
+                  else if(event.dataTransfer.getData('text/plain')) {
+                    this.innerHTML=event.dataTransfer.getData('text/plain')
+                  }
+              }
+              return false;
+            },false);
+
+          })();
+        </script>
+    </section>
+  </body>
+</html>
