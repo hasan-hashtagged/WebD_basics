@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Entity Reference Usage:-->
+<employees>
+  Let&apos;s see what is this..
+  <name>Mohandas Karamchand</name>
+  <Birthday date="&lt;2/10/1888&gt;"></Birthday>
+</employees>

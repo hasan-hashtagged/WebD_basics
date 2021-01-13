@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<books>
+  <book>
+    <subject standard="class V">History</subject>
+    <author>Test</author>
+    <price>Rs 200/-</price>
+  </book>
+
+  <book>
+    <subject standard="class V">Maths</subject>
+    <author>Test</author>
+    <price>Rs 500/-</price>
+  </book>
+  
+</books>

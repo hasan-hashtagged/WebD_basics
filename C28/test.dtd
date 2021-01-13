@@ -1,0 +1,12 @@
+<!ELEMENT car (desc, parts*)>
+
+<!ELEMENT desc ANY>
+
+<!ELEMENT parts (item*, milage)>
+
+<!ELEMENT item (item*)?>
+<!ATTLIST item name CDATA #REQUIRED
+               amount CDATA #IMPLIED>
+
+<!ELEMENT milage EMPTY>
+<!ATTLIST milage inkmph CDATA #REQUIRED>

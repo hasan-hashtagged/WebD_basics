@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--A car model-->
+<!DOCTYPE car SYSTEM "test.dtd">
+<car>
+  <desc>This describes some parts of car</desc>
+  <parts>
+    <item name="wheel" amount="4" />
+    <item name="seats" amount="5" />
+    <item name="belt" amount="5" />
+    <milage inkmph="25" />
+  </parts>
+</car>
