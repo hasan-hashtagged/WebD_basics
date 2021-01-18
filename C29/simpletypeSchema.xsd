@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://example1.com">
+  <xs:element name="dress" type="dressSize"/>
+  <xs:complexType name="dressSize">
+    <xs:choice>
+      <xs:element name="size" type="sizeType"/>
+      <xs:element name="medium" type="Medium"/>
+      <xs:element name="small" type="Small"/>
+      <xs:element name="eLarge" type="Elarge"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:simpleType name="sizeType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="2"/>
+      <xs:maxInclusive value="18"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Medium">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="8"/>
+      <xs:maxInclusive value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Small">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="2"/>
+      <xs:maxInclusive value="7"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Elarge">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="small"/>
+      <xs:enumeration value="medium"/>
+      <xs:enumeration value="extra Large"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

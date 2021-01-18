@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <Song xmlns="http://example1.com"
+    xmlns:art="http://example2.com">
+    <Title>Moh Moh ke dhage</Title>
+    <Year>2015</Year>
+    <Lyricist>
+      <art:name>
+        <art:Title>Mr.</art:Title>
+        <art:First>Varun</art:First>
+        <art:Last>Grover</art:Last>
+      </art:name>
+    </Lyricist>
+  </Song>
+</root>

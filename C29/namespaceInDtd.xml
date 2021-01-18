@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE checkbook SYSTEM "checkbook.dtd">
+<checkbook>
+  <deposit type="direct" xmlns="http://www.example.com">
+    <name>Bob</name>
+    <amount>1000</amount>
+    <description category="income">Payment</description>
+  </deposit>
+</checkbook>

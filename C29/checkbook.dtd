@@ -1,0 +1,8 @@
+<!ELEMENT checkbook (deposit)*>
+<!ELEMENT deposit (name, amount, description?)>
+<!ATTLIST deposit
+type (cash | direct) #REQUIRED xmlns CDATA #FIXED "http://www.example.com">
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT amount (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description category (income | food) 'food'>
