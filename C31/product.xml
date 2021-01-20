@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xslapplytemplate.xsl"?>
+<PRODUCTDATA>
+  <PRODUCT>
+    <PRODUCTNAME>Bike</PRODUCTNAME>
+    <DESCRIPTION>A vehicle for short travel</DESCRIPTION>
+    <QUANTITY>1</QUANTITY>
+    <PRICE>95,000</PRICE>
+  </PRODUCT>
+
+  <PRODUCT>
+    <PRODUCTNAME>Car</PRODUCTNAME>
+    <DESCRIPTION>A vehicle for long travel</DESCRIPTION>
+    <QUANTITY>1</QUANTITY>
+    <PRICE>10,95,000</PRICE>
+  </PRODUCT>
+
+  <PRODUCT>
+    <PRODUCTNAME>Bus</PRODUCTNAME>
+    <DESCRIPTION>A Public vehicle for travel</DESCRIPTION>
+    <QUANTITY>1</QUANTITY>
+    <PRICE>12,95,000</PRICE>
+  </PRODUCT>
+
+</PRODUCTDATA>
