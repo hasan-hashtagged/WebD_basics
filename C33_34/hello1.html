@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Asynchronous Reading</title>
+    <script type="text/javascript">
+      function hello() {
+        var reqObject = new XMLHttpRequest();
+        reqObject.open('Get', 'hello.xml', true);
+        reqObject.onreadystatechange = function() {
+          if(reqObject.readyState==4) {
+            document.getElementById('img1').src="";
+            document.getElementById('img1').alt="The request has been received";
+            if(reqObject.status==200) {
+              var nodes = reqObject.responseXML.getElementsByTagName('name');
+              for (var i = 0; i < nodes.length; i++) {
+                document.getElementById('message').innerHTML += '<b>'+nodes[i].firstChild.nodeValue + '</b><br/>';
+              }
+            }
+            else {
+              alert('request failed');
+            }
+          }
+          else {
+            document.getElementById('img1').src='../progressbar.gif';
+            alert(reqObject.readyState);
+          }
+        }
+        reqObject.send(null);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Asynchronous Reading</h1>
+    <input type="button" value="Click Me" onclick="hello();">
+    <p>
+      <img id="img1" alt="Click button to Asynchronous reading" />
+    </p>
+    <div id="message"></div>
+  </body>
+</html>

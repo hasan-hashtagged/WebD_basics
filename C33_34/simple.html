@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AJAX application check</title>
+    <script language="javascript">
+      var XMLhttpReq=false;
+      XMLhttpReq = new XMLHttpRequest();
+      function loadXMLDoc(datasource, divID) {
+        if(XMLhttpReq) {
+          var obj = document.getElementById(divID);
+          XMLhttpReq.open("GET", datasource);
+          XMLhttpReq.onreadystatechange = function() {
+            if(XMLhttpReq.readyState==4 && XMLhttpReq.status==200) {
+              obj.innerHTML=XMLhttpReq.responseText;
+            }
+          }
+          XMLhttpReq.send(null);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="myDIV">
+      <h2>Let us see</h2>
+      <button type="button" onclick="loadXMLDoc('message.xml','myDIV')">Change content</button>
+    </div>
+  </body>
+</html>

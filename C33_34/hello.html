@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Synchronous reading</title>
+    <script type="text/javascript">
+      function getDetail() {
+        var reqOject = new XMLHttpRequest();
+        reqOject.open("Get", "hello.xml", false);
+        reqOject.send(null);
+        reqOject.onreadystatechange = function() {
+          alert(reqOject.readyState);
+        }
+        if(reqOject.status==200) {
+          document.getElementById('message').innerHTML= '<p>'+ "The readyState of XMLHttpRequest is:"+reqOject.readyState+'</p><p>';
+          var nodes=reqOject.responseXML.getElementsByTagName('name');
+          for (var i = 0; i < nodes.length; i++) {
+            document.getElementById('message').innerHTML +='<b>'+nodes[i].firstChild.nodeValue +'</b><br/>';
+          }
+        }
+        else {
+          alert('request failed');
+        }
+        document.getElementById('message').innerHTML += "</p>";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Synchronous reading</h1>
+    <input type="button" value="Click Me" onclick="getDetail();" />
+    <div id="message"></div>
+  </body>
+</html>

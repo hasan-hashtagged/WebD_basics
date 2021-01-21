@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reading Response Header.</title>
+    <script type="text/javascript">
+      var reqType="";
+      var reqObject;
+      function doHeadRequest(req, url) {
+        reqType = req;
+        reqObject = new XMLHttpRequest();
+        reqObject.onreadystatechange = handleStateChange;
+        reqObject.open('Get', url, true);
+        reqObject.send(null);
+      }
+      function handleStateChange() {
+        if(reqObject.readyState == 4) {
+          if(reqType == "allResponseHeaders") {
+            alert(reqObject.getAllResponseHeaders());
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Reading Response Headers</h1>
+    </div>
+    <a href="javascript:doHeadRequest('allResponseHeaders', 'read.xml')"> Read Response headers</a>
+  </body>
+</html>

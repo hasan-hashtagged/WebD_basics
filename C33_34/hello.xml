@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>
+  <student>
+    <name>Hasan</name>
+  </student>
+  <student>
+    <name>Jamil</name>
+  </student>
+  <student>
+    <name>Tester</name>
+  </student>
+</class>
