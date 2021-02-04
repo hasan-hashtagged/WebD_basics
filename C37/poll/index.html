@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Poll Page</title>
+    <script src="ajax.js"></script>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Simple Poll</h1>
+    </div>
+    <h2>Kya aapke toothpaste mein namak hai??</h2>
+    <form>
+      Haan:
+      <input type="radio" name="vote" value="1" onclick="sendVote(this.value)"><br><br>
+      Nahi:
+      <input type="radio" name="vote" value="0" onclick="sendVote(this.value)">
+    </form>
+  </body>
+</html>

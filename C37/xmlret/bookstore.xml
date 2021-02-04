@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BookStore>
+  <Book>
+    <title>title1</title>
+    <author>abc</author>
+    <year>1998</year>
+  </Book>
+  <Book>
+    <title>title2</title>
+    <author>cde</author>
+    <year>2000</year>
+  </Book>
+  <Book>
+    <title>title3</title>
+    <author>xyz</author>
+    <year>2002</year>
+  </Book>
+</BookStore>

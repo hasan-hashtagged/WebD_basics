@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Db Retrival</title>
+    <script src="ajax.js"></script>
+  </head>
+  <body>
+    <div style="background:green; color:white;">
+      <h1>Database Retrival</h1>
+    </div>
+    <form>
+      Employee List:
+      <select name="names" onchange="sendName(this.value)">
+        <option selected>Select Name..</option>
+        <option value="1">Nirmal</option>
+        <option value="2">Aneesha</option>
+        <option value="3">Venkat</option>
+      </select>
+    </form>
+    <div id="res"></div>
+  </body>
+</html>

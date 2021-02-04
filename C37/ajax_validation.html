@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Validating username</title>
+    <script type="text/javascript">
+      function validate(name) {
+        var http = new XMLHttpRequest();
+
+        http.abort();
+        http.open("GET", "validation.php?name="+ name, true);
+        http.onreadystatechange = function() {
+          if (http.readyState == 4 ) {
+            document.getElementById('res').innerHTML = http.responseText;
+          }
+        }
+        http.send(null);
+      }
+    </script>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Validating Username</h1>
+    </div>
+    <form>
+      Username:
+      <input type="text" name="username" onkeyup="validate(this.value)"><br>
+      <div id="res"></div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating Suggestions</title>
+    <script src="ajax.js"></script>
+  </head>
+  <body>
+    <div Style="background: green; color: white;">
+      <h1>Word Suggestions</h1>
+    </div>
+    <div>
+      <form>
+        Enter a string:
+        <input type="text" name="string" onkeyup="sendSuggestion(this.value);">
+      </form>
+      <p>
+        Suggested words are:<span id="res"></span>
+      </p>
+    </div>
+  </body>
+</html>

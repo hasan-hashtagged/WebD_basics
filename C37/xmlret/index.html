@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Selecting from XML</title>
+    <script src="select.js"></script>
+  </head>
+  <body>
+    <div style="background: green; color: white;">
+      <h1>Seleccting XML from file</h1>
+    </div>
+    <form>
+      <select name="title" onchange="sendTitle(this.value)">
+        <option value="title1">Title1</option>
+        <option value="title2">Title2</option>
+        <option value="title3">Title3</option>
+      </select>
+    </form>
+    <p>
+      <div id="res">
+        <b>Book details will be given here: </b>
+      </div>
+    </p>
+  </body>
+</html>
